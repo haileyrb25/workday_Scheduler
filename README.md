@@ -22,3 +22,15 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+
+[Live Link](https://haileyrb25.github.io/workday_Scheduler/)
+Click this link to see this application in action! You should be able to see the current ticking time at the top, along with the work day schedule (8am-5pm) at the bottom with editable changes you can fill out to save on your scheduler!
+
+[Live Link](https://github.com/haileyrb25/workday_Scheduler)
+Click this link to see my github activity for this repository! Here, you should be able to see any commits made and how this project came to life.
+
+
+
+Here is what the final product looks like: (will add when done)
+![screenshot]()

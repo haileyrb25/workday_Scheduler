@@ -14,28 +14,27 @@ var saveButtons = document.querySelector("#saveBtn");
 var blockHour = document.querySelector("#time-block");
 
 
-function trackHour() {
-var currentHour = moment().hour();
+function eachTimeBlock(){
+    $timeBlocks.each(function(){
+      var currentBlock = $($this);
+      var blockHr = parseInt(currentBlock.attr("data-hour"));
+        var currentHour = moment().hour();
 
-$(".time-block").each(function() {
-    var blockHour = parseInt($(this).attr("id").split("hour")[0]);
-    console.log(blockHour, currentHour)
-
-    if (blockHour < currentHour) {
-        $(this).addClass("past");
-        $(this).removeClass("future");
-        $(this).removeClass("present");
+        if (blockHr < currentHour) {
+            $(this).addClass("past");
+            $(this).removeClass("future");
+            $(this).removeClass("present");
         }
-    else if (blockHour === currentHour) {
-        $(this).removeClass("past");
-        $(this).addClass("present");
-        $(this).removeClass("future");
+        else if (blockHr === currentHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+            $(this).removeClass("future");
         }
-    else {
-        $(this).removeClass("present");
-        $(this).removeClass("past");
-        $(this).addClass("future");
+        else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
         }
-})
+});
 trackHour();
 }

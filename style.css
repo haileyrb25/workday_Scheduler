@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -16,7 +17,7 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: rgba(54, 196, 172, 0.733);
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -48,12 +49,12 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #f7d578;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #77dda2;
   color: white;
 }
 

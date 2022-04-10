@@ -15,14 +15,21 @@ $(".saveBtn").on("click", function() {
     var value = $(this).sibling("info").val();
     var time = $(this).parent().attr("id");
 localStorage.setItem(time, value)
-//this piece of code was givwn in hw startup- it let's us know what we are saving with save button
+//this piece of code was given in hw startup- it let's us know what we are saving with save button
+
+
+//load any saved data from LocalStorage for each hour
+$("#nine .info").val(localStorage.getItem("nine"));
+$("#ten .info").val(localStorage.getItem("ten"));
+$("#eleven .info").val(localStorage.getItem("eleven"));
+$("#twelve .info").val(localStorage.getItem("twelve"));
+$("#thirteen .info").val(localStorage.getItem("thirteen"));
+$("#fourteen .info").val(localStorage.getItem("fourteen"));
+$("#fifteen .info").val(localStorage.getItem("fifteen"));
+$("#sixteen .info").val(localStorage.getItem("sixteen"));
+$("#seventeen .info").val(localStorage.getItem("seventeen"));
+
 })
-
-
-// var infoText = document.querySelector("#info");
-// var saveButtons = document.querySelector("#saveBtn");
-// var blockHour = document.querySelector("#time-block");
-
 //update colors of each hour block 
 function colorBlockChange() {
     var currentHour = moment().hour();

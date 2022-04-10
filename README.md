@@ -32,5 +32,5 @@ Click this link to see my github activity for this repository! Here, you should 
 
 
 
-Here is what the final product looks like: (will add when done)
-![screenshot]()
+Here is what the final product looks like:
+![screenshot](./assets/screencapture-file-Users-hailey-Documents-UCF-Homework-workDay-schedule-workday-Scheduler-index-html-2022-04-09-22_34_34.jpg)

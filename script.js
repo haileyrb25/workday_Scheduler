@@ -19,25 +19,23 @@ localStorage.setItem(time, value)
 })
 
 
+// var infoText = document.querySelector("#info");
+// var saveButtons = document.querySelector("#saveBtn");
+// var blockHour = document.querySelector("#time-block");
 
+//update colors of each hour block 
+function colorBlockChange() {
+    var currentHour = moment().hour();
 
-var infoText = document.querySelector("#info");
-var saveButtons = document.querySelector("#saveBtn");
-var blockHour = document.querySelector("#time-block");
-
-
-function eachTimeBlock(){
-    $timeBlocks.each(function(){
-      var currentBlock = $($this);
-      var blockHr = parseInt(currentBlock.attr("data-hour"));
-        var currentHour = moment().hour();
-
-        if (blockHr < currentHour) {
+    $(".time-block").each(function() {
+    var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+//conditionals for time blocks
+        if (blockTime < currentHour) {
             $(this).addClass("past");
             $(this).removeClass("future");
             $(this).removeClass("present");
         }
-        else if (blockHr === currentHour) {
+        else if (blockTime === currentHour) {
             $(this).removeClass("past");
             $(this).addClass("present");
             $(this).removeClass("future");
@@ -47,6 +45,8 @@ function eachTimeBlock(){
             $(this).removeClass("past");
             $(this).addClass("future");
         }
-});
-trackHour();
+        
+    })
 }
+    colorBlockChange();
+})

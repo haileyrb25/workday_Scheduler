@@ -28,21 +28,22 @@ $("#fourteen .info").val(localStorage.getItem("fourteen"));
 $("#fifteen .info").val(localStorage.getItem("fifteen"));
 $("#sixteen .info").val(localStorage.getItem("sixteen"));
 $("#seventeen .info").val(localStorage.getItem("seventeen"));
-
 })
+console.log()
+
 //update colors of each hour block 
 function colorBlockChange() {
-    var currentHour = moment().hour();
+    var currentHourBlock = moment().hour();
 
     $(".time-block").each(function() {
     var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-//conditionals for time blocks
-        if (blockTime < currentHour) {
+//conditionals for time blocks- in order to set them to past present or future (from css)
+        if (blockTime > currentHourBlock) {
             $(this).addClass("past");
             $(this).removeClass("future");
             $(this).removeClass("present");
         }
-        else if (blockTime === currentHour) {
+        else if (blockTime === currentHourBlock) {
             $(this).removeClass("past");
             $(this).addClass("present");
             $(this).removeClass("future");
@@ -55,5 +56,6 @@ function colorBlockChange() {
         
     })
 }
+//returns function back
     colorBlockChange();
 })
